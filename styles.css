@@ -308,6 +308,11 @@ p { margin: 0 0 1rem; }
   flex-shrink: 0;
 }
 
+/* CTA in het mobiele uitklapmenu (verborgen op desktop) */
+.nav-cta-mobile {
+  display: none;
+}
+
 /* Hamburger */
 .nav-toggle {
   display: none;
@@ -352,20 +357,80 @@ p { margin: 0 0 1rem; }
     linear-gradient(180deg, var(--color-tint) 0%, var(--color-white) 72%);
   overflow: hidden;
 }
-.hero-inner {
-  max-width: 54rem;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+.hero-copy {
+  max-width: 40rem;
 }
 .hero-lead {
   font-size: clamp(1.075rem, 2.1vw, 1.3rem);
   color: var(--color-ink-soft);
-  max-width: 42rem;
   margin-bottom: 2rem;
 }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-bottom: 3rem;
+}
+
+/* Hero traject-kaart */
+.hero-visual {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.1rem);
+  box-shadow: var(--shadow-lg);
+}
+.hero-visual-label {
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.hero-flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: flow;
+}
+.hero-flow li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.55rem 0;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.hero-flow li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  top: 2.35rem;
+  width: 2px;
+  height: calc(100% - 1.1rem);
+  background: var(--color-tint-2);
+}
+.hero-flow-num {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-tint);
+  border-radius: 50%;
 }
 
 .hero-stats {
@@ -373,7 +438,7 @@ p { margin: 0 0 1rem; }
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
   padding: 1.75rem 0 0;
   border-top: 1px solid var(--color-border);
 }
@@ -746,11 +811,78 @@ p { margin: 0 0 1rem; }
   resize: vertical;
   min-height: 110px;
 }
+.form-hint {
+  margin: 0 0 1.1rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+.req {
+  color: var(--color-primary);
+  font-weight: 700;
+}
 .form-note {
   margin: 1rem 0 0;
   font-size: 0.9rem;
   color: var(--color-muted);
   text-align: center;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.faq-item {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 0.9rem;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.faq-item[open] {
+  border-color: var(--color-tint-2);
+  box-shadow: var(--shadow);
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-ink);
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  background:
+    var(--color-tint)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230D7377' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E")
+    center / 0.85rem no-repeat;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+.faq-item[open] summary::after {
+  transform: rotate(135deg);
+}
+.faq-item summary:hover {
+  color: var(--color-primary);
+}
+.faq-body {
+  padding: 0 1.4rem 1.3rem;
+}
+.faq-body p {
+  margin: 0;
+  color: var(--color-ink-soft);
 }
 
 /* ---------- Footer ---------- */
@@ -841,6 +973,12 @@ p { margin: 0 0 1rem; }
   .grid-two {
     grid-template-columns: 1fr;
   }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-copy {
+    max-width: none;
+  }
   .footer-inner {
     grid-template-columns: 1fr 1fr;
   }
@@ -889,6 +1027,11 @@ p { margin: 0 0 1rem; }
   }
   .nav-list a::after {
     display: none;
+  }
+  .nav-cta-mobile {
+    display: inline-flex;
+    justify-content: center;
+    margin: 0.4rem clamp(1.15rem, 4vw, 2rem) 1.4rem;
   }
 }
 

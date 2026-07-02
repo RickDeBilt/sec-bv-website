@@ -33,9 +33,10 @@ contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 6. Waarom kiezen voor S.E.C.
 7. Werkwijze (4 stappen)
 8. Sectoren / opdrachtgevers
-9. CTA-sectie
-10. Contactblok (met visueel formulier + mailto)
-11. Footer
+9. Veelgestelde vragen (FAQ, native `<details>`-accordeon)
+10. CTA-sectie
+11. Contactblok (met visueel formulier + mailto)
+12. Footer
 
 ## Lokaal bekijken
 
