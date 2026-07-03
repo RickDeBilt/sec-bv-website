@@ -2,8 +2,8 @@
 
 Snelle, moderne one-page website voor **S.E.C. B.V. — Schoonmaak Expertise Centrum**.
 
-S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij aanbestedingen van
-facilitaire diensten: schoonmaakonderhoud van gebouwen, technische installaties,
+S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij facilitaire
+aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen:
 contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 
 ## Doel
@@ -18,6 +18,7 @@ contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 | Bestand           | Omschrijving                                              |
 | ----------------- | -------------------------------------------------------- |
 | `index.html`      | Volledige one-page website (semantische HTML)            |
+| `bedankt.html`    | Bedanktpagina na verzending van het contactformulier     |
 | `styles.css`      | Design system + styling (CSS-variabelen, mobile-first)   |
 | `script.js`       | Kleine vanilla JS: mobiel menu, scroll-reveal, jaartal   |
 | `assets/`         | Media, waaronder `logo-sec.png`                          |
@@ -35,8 +36,10 @@ contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 8. Sectoren / opdrachtgevers
 9. Veelgestelde vragen (FAQ, native `<details>`-accordeon)
 10. CTA-sectie
-11. Contactblok (met visueel formulier + mailto)
+11. Contactblok (werkend Web3Forms-formulier + mailto/tel)
 12. Footer
+
+Losse pagina: `bedankt.html` — bevestigingspagina waar bezoekers na verzending landen.
 
 ## Lokaal bekijken
 
@@ -79,11 +82,38 @@ De site gebruikt een systeem-fontstack met `Hanken Grotesk`/`Hanken Book` als ee
 keuze (indien lokaal beschikbaar), zodat de site snel blijft zonder externe fonts.
 Wil je Hanken gegarandeerd tonen, host het font dan zelf en voeg een `@font-face` toe.
 
-## Contactformulier
+## Contactformulier (Web3Forms)
 
-Het formulier is nu een **visueel, niet-verzendend** formulier met een `mailto:`-fallback.
-Er is bewust geen backend of externe formservice gebruikt. Voor echte verzending kan later
-een form-endpoint of serverless functie worden gekoppeld.
+Het contactformulier verstuurt via **[Web3Forms](https://web3forms.com)** — een gratis
+form-endpoint zonder eigen backend. Na verzending wordt de bezoeker doorgestuurd naar
+`bedankt.html`.
+
+### Access key
+
+In `index.html` staat in het `<form>`-blok de actieve Web3Forms access key
+(geregistreerd op `info@secbv.nl`):
+
+```html
+<input type="hidden" name="access_key" value="2ac7510c-e861-4d85-8af3-0e89098880f0" />
+```
+
+Wil je een andere key gebruiken (bv. bij een ander mailadres):
+
+1. Ga naar <https://web3forms.com> en vraag een gratis access key aan.
+2. Kopieer de access key uit de bevestigingsmail.
+3. Vervang de waarde van `value="..."` in het `access_key`-veld in `index.html`
+   (en in `deploy/index.html` als je die map ook publiceert).
+
+> De key moet geregistreerd zijn op het ontvangende mailadres, anders komen
+> inzendingen **niet** aan.
+
+### Overige velden
+
+- `redirect` → `https://www.secbv.nl/bedankt.html` (bedanktpagina na verzending).
+- `botcheck` → verborgen honeypot tegen spam; **niet** verwijderen.
+- `subject` / `from_name` → onderwerp en afzendernaam van de notificatiemail.
+
+Direct mailen of bellen kan altijd: `info@secbv.nl`, `06-50748992` / `06-38323667`.
 
 ## Techniek & prestaties
 

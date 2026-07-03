@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bedankt voor uw bericht — S.E.C. B.V.</title>
+  <meta name="description" content="Bedankt voor uw bericht aan S.E.C. B.V. We nemen zo snel mogelijk contact met u op." />
+  <meta name="theme-color" content="#0D7377" />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="icon" type="image/png" href="assets/logo-sec.png" />
+  <link rel="apple-touch-icon" href="assets/logo-sec.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .thanks {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .thanks-header {
+      padding: 1.5rem 0;
+    }
+    .thanks-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0 4rem;
+    }
+    .thanks-card {
+      max-width: 560px;
+      text-align: center;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(2rem, 5vw, 3.25rem);
+    }
+    .thanks-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 1.5rem;
+      color: #fff;
+      background: var(--color-primary);
+      border-radius: var(--radius-pill);
+      box-shadow: 0 10px 24px rgba(13, 115, 119, 0.28);
+    }
+    .thanks-badge svg { width: 34px; height: 34px; }
+    .thanks-card h1 {
+      font-size: clamp(1.6rem, 4vw, 2.1rem);
+      margin: 0 0 0.75rem;
+    }
+    .thanks-card p {
+      color: var(--color-muted);
+      margin: 0 auto 1.75rem;
+      max-width: 42ch;
+    }
+    .thanks-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .thanks-note {
+      margin-top: 1.75rem;
+      font-size: 0.9rem;
+    }
+    .thanks-note a { color: var(--color-primary); }
+  </style>
+</head>
+
+<body>
+  <div class="thanks">
+    <header class="thanks-header">
+      <div class="container">
+        <a class="brand" href="index.html" aria-label="S.E.C. B.V. Schoonmaak Expertise Centrum — naar de homepage">
+          <img src="assets/logo-sec.png" alt="S.E.C. B.V. Schoonmaak Expertise Centrum" class="brand-logo" width="120" height="64" decoding="async" />
+        </a>
+      </div>
+    </header>
+
+    <main class="thanks-main">
+      <div class="container">
+        <div class="thanks-card">
+          <span class="thanks-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </span>
+          <h1>Bedankt voor uw bericht</h1>
+          <p>We hebben uw aanvraag ontvangen en nemen zo snel mogelijk contact met u op.</p>
+          <div class="thanks-actions">
+            <a href="index.html" class="btn btn-primary">Terug naar de homepage</a>
+            <a href="mailto:info@secbv.nl" class="btn btn-outline">Mail S.E.C. direct</a>
+          </div>
+          <p class="thanks-note">
+            Spoed? Bel <a href="tel:+31650748992">06-50748992</a> of <a href="tel:+31638323667">06-38323667</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
