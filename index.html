@@ -580,14 +580,11 @@
         </div>
 
         <div class="contact-card">
-          <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <!-- Web3Forms access key voor info@secbv.nl (zie README.md) -->
-            <input type="hidden" name="access_key" value="2ac7510c-e861-4d85-8af3-0e89098880f0" />
-            <input type="hidden" name="redirect" value="https://www.secbv.nl/bedankt.html" />
-            <input type="hidden" name="subject" value="Nieuw contactverzoek via secbv.nl" />
-            <input type="hidden" name="from_name" value="Website S.E.C. B.V." />
-            <!-- Honeypot tegen spam: niet invullen -->
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <form class="contact-form" id="contact-form" name="contact" action="/api/contact.php" method="POST">
+            <!-- Honeypot tegen spam: door mensen onzichtbaar, door bots vaak ingevuld -->
+            <div class="hidden" aria-hidden="true" style="position:absolute;left:-9999px;">
+              <label>Laat dit veld leeg <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
 
             <p class="form-hint">Velden met <span class="req">*</span> zijn verplicht.</p>
             <div class="form-row">
@@ -623,7 +620,10 @@
               <label for="bericht">Bericht <span class="req" aria-hidden="true">*</span></label>
               <textarea id="bericht" name="bericht" rows="4" placeholder="Waarmee kunnen we u helpen?" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Verstuur bericht</button>
+            <p id="form-status" role="status" aria-live="polite" class="form-status" hidden></p>
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+              <span id="submit-label">Verstuur bericht</span>
+            </button>
             <p class="form-note">
               Liever direct contact? Mail naar <a href="mailto:info@secbv.nl">info@secbv.nl</a>
               of bel <a href="tel:+31650748992">06-50748992</a> / <a href="tel:+31638323667">06-38323667</a>.

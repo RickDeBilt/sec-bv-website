@@ -5,3 +5,6 @@ deploy/
 .env
 .DS_Store
 .vscode/
+
+# Echte SMTP-inloggegevens — nooit in git
+private/contact-config.php

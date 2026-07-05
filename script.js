@@ -83,4 +83,67 @@
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
   }
+
+  /* ---------- Contactformulier (fetch → PHP-endpoint) ---------- */
+  var form = document.getElementById("contact-form");
+  var statusEl = document.getElementById("form-status");
+  var submitBtn = document.getElementById("submit-btn");
+  var submitLabel = document.getElementById("submit-label");
+  var loadedAt = Date.now();
+
+  var setStatus = function (message, ok) {
+    if (!statusEl) return;
+    statusEl.textContent = message;
+    statusEl.hidden = false;
+    statusEl.classList.toggle("is-error", !ok);
+    statusEl.classList.toggle("is-ok", ok);
+  };
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (typeof form.reportValidity === "function" && !form.reportValidity()) {
+        return;
+      }
+
+      var data = new FormData(form);
+      data.append("elapsed", String(Date.now() - loadedAt));
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitLabel) submitLabel.textContent = "Bezig met verzenden…";
+      if (statusEl) statusEl.hidden = true;
+
+      fetch(form.getAttribute("action") || "/api/contact.php", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: data,
+      })
+        .then(function (res) {
+          return res.json().then(function (json) {
+            return { ok: res.ok, json: json };
+          });
+        })
+        .then(function (result) {
+          if (result.ok && result.json && result.json.success) {
+            window.location.href = "/bedankt.html";
+            return;
+          }
+          setStatus(
+            (result.json && result.json.message) ||
+              "Er ging iets mis bij het verzenden. Probeer het later opnieuw of mail direct naar info@secbv.nl.",
+            false
+          );
+        })
+        .catch(function () {
+          setStatus(
+            "Verzenden lukte niet. Controleer uw verbinding of mail direct naar info@secbv.nl.",
+            false
+          );
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+          if (submitLabel) submitLabel.textContent = "Verstuur bericht";
+        });
+    });
+  }
 })();

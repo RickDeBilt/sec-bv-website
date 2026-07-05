@@ -915,6 +915,23 @@ p { margin: 0 0 1rem; }
   color: var(--color-muted);
   text-align: center;
 }
+.form-status {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md, 8px);
+  border: 1px solid transparent;
+}
+.form-status.is-error {
+  color: #8a1c1c;
+  background: #fdecec;
+  border-color: #f5c2c2;
+}
+.form-status.is-ok {
+  color: #0b5c4f;
+  background: #e7f6f1;
+  border-color: #b7e4d6;
+}
 
 /* ---------- FAQ ---------- */
 .faq {
