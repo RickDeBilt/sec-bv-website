@@ -10,8 +10,10 @@
  */
 
 return [
-    // SMTP-server (Vimexx / DirectAdmin)
-    'smtp_host'      => 'mail.secbv.nl',
+    // SMTP-server (Vimexx / ZXCS-platform).
+    // Gebruik mail.zxcs.nl i.p.v. mail.secbv.nl: de officiele mail (MX) draait bij
+    // Microsoft, dus mail.secbv.nl wijst naar Microsoft en niet naar de Vimexx-SMTP.
+    'smtp_host'      => 'mail.zxcs.nl',
     'smtp_port'      => 465,          // SMTPS
     'smtp_user'      => 'website@secbv.nl',
     'smtp_password'  => 'VUL_HIER_HET_WACHTWOORD_IN',
