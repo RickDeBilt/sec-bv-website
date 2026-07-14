@@ -26,6 +26,10 @@ contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 | `api/lib/PHPMailer/` | Meegeleverde PHPMailer-library (geen Composer nodig)  |
 | `private/`        | SMTP-config **buiten de webroot** (`contact-config.php`) |
 | `.htaccess`       | Cache/gzip + beveiliging van het configbestand           |
+| `llms.txt`        | Compacte AI-samenvatting (Markdown) voor AI-modellen     |
+| `llms-full.txt`   | Uitgebreide, feitelijke AI-tekstversie van de website    |
+| `sitemap.xml`     | XML-sitemap met de belangrijkste URL's                   |
+| `robots.txt`      | Crawl-richtlijnen + verwijzing naar de sitemap           |
 | `README.md`       | Dit document                                             |
 
 ## Secties (one-page)
@@ -130,6 +134,29 @@ Direct mailen of bellen kan altijd: `info@secbv.nl`, `06-50748992` / `06-3832366
 - JSON-LD structured data (`ProfessionalService`)
 - Toegankelijk: skip-link, focus-states, aria-labels, respecteert `prefers-reduced-motion`
 - Geen externe frameworks of zware libraries
+
+## AI & SEO (llms.txt, sitemap, robots)
+
+Om de site goed begrijpelijk te maken voor **AI-modellen** en **zoekmachines**
+staan er vier bestanden in de root van de website:
+
+| Bestand           | Doel                                                                                     |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| `llms.txt`        | Compacte, gestructureerde Markdown-samenvatting van S.E.C. B.V. (volgt de llms.txt-conventie). |
+| `llms-full.txt`   | Uitgebreidere, feitelijke tekstversie: wie/wat, diensten, doelgroepen, werkwijze, contact. |
+| `sitemap.xml`     | XML-sitemap met de belangrijkste URL's, inclusief `lastmod`.                              |
+| `robots.txt`      | Staat normale crawling toe en verwijst naar `sitemap.xml` (met een comment naar `llms.txt`). |
+
+Belangrijk bij het onderhouden:
+
+- Alle vier de bestanden horen in de **root** van de website
+  (`https://www.secbv.nl/llms.txt`, `.../sitemap.xml`, enz.).
+- `llms.txt` en `llms-full.txt` bevatten **alleen feitelijke** informatie — geen
+  overdreven marketingtaal en geen persoonsnamen bij telefoonnummers.
+- S.E.C. B.V. voert **geen technische installaties** uit; houd deze bestanden vrij
+  van verwijzingen daarnaar.
+- Werk `lastmod` in `sitemap.xml` bij wanneer de inhoud wijzigt (formaat `JJJJ-MM-DD`).
+- Wijzig je iets, werk dan ook de kopie in `deploy/` bij (zie hieronder).
 
 ## Uitbreiden naar meerdere pagina's
 

@@ -1,0 +1,82 @@
+# S.E.C. B.V. — Schoonmaak Expertise Centrum
+
+> S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij aanbestedingen van facilitaire diensten, met een sterke focus op schoonmaakonderhoud van gebouwen. Dit document is een uitgebreide, feitelijke tekstversie van de website, bedoeld om de organisatie goed begrijpelijk te maken voor AI-modellen en zoekmachines.
+
+## Wie is S.E.C. B.V.
+
+S.E.C. B.V. staat voor Schoonmaak Expertise Centrum. Het is een onafhankelijk adviesbureau dat organisaties ondersteunt bij het aanbesteden en beheren van facilitaire diensten. De kern van het werk ligt bij schoonmaakonderhoud van gebouwen.
+
+S.E.C. B.V. werkt onafhankelijk. Dat betekent dat het advies niet gebonden is aan een specifieke schoonmaakleverancier of dienstverlener. De organisatie behartigt het belang van de opdrachtgever.
+
+## Wat doet S.E.C. B.V.
+
+S.E.C. B.V. begeleidt organisaties door het volledige aanbestedingstraject van facilitaire diensten, van de eerste voorbereiding tot heldere contractafspraken. Daarbij horen onder andere:
+
+- Het opstellen van een duidelijke uitvraag voor een aanbesteding.
+- Het objectief en helder beoordelen van inschrijvingen.
+- Het selecteren van geschikte leveranciers.
+- Het maken van heldere contractafspraken.
+- Het beheren van lopende contracten.
+- Het uitvoeren van kwaliteitsmetingen en het bewaken van kwaliteit.
+
+Het doel is dat organisaties een weloverwogen keuze maken, met inzicht in kwaliteit, prijs en afspraken, en dat de gemaakte afspraken tijdens de looptijd van het contract worden nageleefd.
+
+## Diensten
+
+S.E.C. B.V. biedt onder meer de volgende diensten:
+
+- **Facilitaire aanbestedingen**: begeleiding en advies bij het aanbesteden van facilitaire diensten.
+- **Schoonmaakonderhoud**: gespecialiseerd advies over het schoonmaakonderhoud van gebouwen.
+- **Onafhankelijk advies**: advies dat het belang van de opdrachtgever dient, los van leveranciers.
+- **Leveranciersselectie**: ondersteuning bij het selecteren en beoordelen van leveranciers.
+- **Beoordeling van inschrijvingen**: een duidelijke en objectieve beoordeling van ontvangen inschrijvingen.
+- **Contractbeheer**: het bewaken en beheren van contractafspraken.
+- **Kwaliteitsmetingen**: het meten en bewaken van de geleverde kwaliteit.
+
+## Doelgroepen
+
+S.E.C. B.V. ondersteunt uiteenlopende organisaties, waaronder:
+
+- Organisaties en bedrijven die facilitaire diensten willen aanbesteden.
+- VvE's (Verenigingen van Eigenaren).
+- Vastgoedorganisaties.
+- Zorginstellingen.
+- Onderwijsinstellingen.
+- Gemeenten.
+
+## Werkwijze
+
+S.E.C. B.V. begeleidt het traject van aanbesteding tot contractafspraken in duidelijke stappen:
+
+1. **Inventarisatie en voorbereiding**: in kaart brengen van de wensen, eisen en uitgangssituatie van de organisatie.
+2. **Uitvraag en aanbesteding**: het opstellen van een heldere uitvraag en het begeleiden van de aanbesteding.
+3. **Beoordeling en selectie**: het objectief beoordelen van inschrijvingen en het selecteren van een geschikte leverancier.
+4. **Contract en kwaliteitsbewaking**: het vastleggen van heldere contractafspraken en het bewaken van kwaliteit via kwaliteitsmetingen tijdens de looptijd.
+
+## Niet aangeboden diensten
+
+Ter voorkoming van misverstanden:
+
+- S.E.C. B.V. voert **géén technische installaties** uit.
+- S.E.C. B.V. verzorgt **géén installatiebeheer** en **géén onderhoud van technische installaties**.
+
+De focus ligt uitsluitend op advies, begeleiding en beheer rondom facilitaire aanbestedingen en schoonmaakonderhoud.
+
+## Contact
+
+- Website: https://www.secbv.nl/
+- E-mail: info@secbv.nl
+- Telefoon: 06-50748992 / 06-38323667
+- Adres: De Tuinderij 19, 3833 SC Leusden
+- KvK: 42080375
+
+Een aanvraag of vraag kan worden gesteld via het contactformulier op de website of rechtstreeks per e-mail of telefoon.
+
+## Belangrijke pagina's
+
+- Homepage: https://www.secbv.nl/
+- Diensten: https://www.secbv.nl/#diensten
+- Aanbestedingsbegeleiding: https://www.secbv.nl/#aanbesteding
+- Werkwijze: https://www.secbv.nl/#werkwijze
+- Contact: https://www.secbv.nl/#contact
+- Compacte AI-samenvatting: https://www.secbv.nl/llms.txt
