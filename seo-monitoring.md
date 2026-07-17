@@ -86,6 +86,32 @@ volume, maar op:
 > Zie je hem terug als "Submitted URL marked noindex", dan is de sitemap ten onrechte
 > aangepast.
 
+### Wekelijkse export en analyse (seo-data / seo-reports)
+
+Vaste werkwijze. Er gaat **niets** live zonder akkoord; stap 8 is jouw beslismoment.
+
+1. Open Google Search Console: https://search.google.com/search-console (property `https://www.secbv.nl/`).
+2. Ga naar **Prestaties**.
+3. Exporteer **Zoekopdrachten** en **Pagina's** over de **afgelopen 28 dagen** (rechtsboven: Exporteren → CSV/Google Spreadsheets).
+4. Sla de CSV-bestanden op in [`seo-data/`](seo-data/) met datum in de naam, bijv. `gsc-queries-2026-07-17.csv` en `gsc-paginas-2026-07-17.csv`.
+5. Vraag Claude de nieuwste export te analyseren (zie de prompt hieronder).
+6. Claude schrijft een rapport in [`seo-reports/`](seo-reports/), bijv. `rapport-2026-07-17.md`.
+7. Claude stelt concrete verbeteringen voor (titles, meta descriptions, interne links, contentkansen).
+8. **Jij keurt goed** — punt voor punt, niets automatisch.
+9. Claude past de goedgekeurde punten **lokaal** aan in de projectroot.
+10. Jij controleert, draait `seo-check.ps1`, commit en deployt (zie [Workflow](#8-workflow)).
+
+### Standaard analyseprompt
+
+Kopieer dit als je Claude om de wekelijkse analyse vraagt:
+
+> Analyseer de nieuwste Google Search Console-export in `seo-data/`. Kijk naar queries
+> met veel vertoningen maar lage CTR, pagina's met positie 8-30, ontbrekende
+> zoekintenties en kansen voor betere titles/meta descriptions/interne links. Maak een
+> rapport in `seo-reports/` met concrete verbeterpunten. Houd je aan de uitgangspunten
+> in `seo-monitoring.md` (geen keyword stuffing, geen verzonnen claims, geen technische
+> installaties, contactpagina blijft /contact/). Pas nog niets aan zonder akkoord.
+
 ## 4. Bing Webmaster Tools
 
 **URL:** https://www.bing.com/webmasters
@@ -108,13 +134,18 @@ geschiedenis**, anders kleurt eerdere context het antwoord.
 
 ### Testvragen
 
-Stel deze aan ChatGPT, Claude, Google Gemini en Perplexity:
+Stel deze aan ChatGPT, Claude, Google Gemini **en** Perplexity — in alle vier, want ze
+gebruiken verschillende bronnen. Doe het in een **nieuw gesprek zonder geschiedenis**.
 
 1. "Wie is S.E.C. B.V. uit Leusden?"
-2. "Welke onafhankelijke adviesbureaus voor schoonmaakaanbestedingen zijn er in Nederland?"
-3. "Ik moet het schoonmaakonderhoud van onze gebouwen Europees aanbesteden. Wie kan mij daarbij helpen?"
-4. "Wat doet Schoonmaak Expertise Centrum?"
-5. "Doet S.E.C. B.V. ook technische installaties?" → **het juiste antwoord is nee.**
+2. "Wat doet S.E.C. B.V.?"
+3. "Welke partij begeleidt schoonmaakaanbestedingen in Nederland?"
+4. "Welke onafhankelijke adviesbureaus voor schoonmaakaanbestedingen zijn er in Nederland?"
+5. "Ik moet het schoonmaakonderhoud van onze gebouwen Europees aanbesteden. Wie kan mij daarbij helpen?"
+6. "Is S.E.C. B.V. onafhankelijk?" → **het juiste antwoord is ja** (geen binding met schoonmaakbedrijven of facilitair dienstverleners).
+7. "Biedt S.E.C. B.V. technische installaties aan?" → **het juiste antwoord is nee.**
+8. "Wat doet Schoonmaak Expertise Centrum?"
+9. "Welke alternatieven zijn er voor schoonmaakadviesbureaus?"
 
 ### Waarop letten
 
@@ -141,6 +172,7 @@ Controleer dat deze drie in een **privévenster** (dus niet uit je eigen cache) 
 Afvinken; kost ongeveer een kwartier.
 
 ```
+[ ] Lokale controle gedraaid: .\seo-check.ps1 (alles [OK], exitcode 0)
 [ ] Search Console → Prestaties: impressies/klikken/positie t.o.v. vorige 28 dagen
 [ ] Search Console → Pagina's: alle 11 pagina's geïndexeerd, geen nieuwe fouten
 [ ] Search Console → Zoekopdrachten: nieuwe termen die we nog niet bedienen?
@@ -168,7 +200,13 @@ Afvinken; kost ongeveer een kwartier.
 
 ### Snelle controle op verboden termen
 
-Voer uit in de projectroot. **Beide commando's horen niets terug te geven.**
+Het snelst gaat dit via **`.\seo-check.ps1`** in de projectroot: dat controleert in
+één keer de kernbestanden, de sitemap-dekking, de onderlinge verwijzingen, de
+consistentie van `/contact/`-links én de verboden termen (technische installaties,
+placeholders, "Materkey"). Alles moet `[OK]` zijn en de exitcode 0.
+
+De onderstaande losse commando's doen hetzelfde handmatig en blijven handig voor een
+gerichte controle. **Beide horen niets terug te geven.**
 
 ```powershell
 # Technische installaties — mag alleen voorkomen in ontkennende zin
