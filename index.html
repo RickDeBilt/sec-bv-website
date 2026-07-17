@@ -35,7 +35,7 @@
   <link rel="icon" type="image/png" href="assets/logo-sec.png" />
   <link rel="apple-touch-icon" href="assets/logo-sec.png" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=3" />
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -216,12 +216,12 @@
           <li><a href="/schoonmaakadvies/">Schoonmaakadvies</a></li>
           <li><a href="/contractbeheer-schoonmaak/">Contract &amp; kwaliteit</a></li>
           <li><a href="/kennisbank/">Kennisbank</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
-        <a href="#contact" class="btn btn-primary nav-cta-mobile">Neem contact op</a>
+        <a href="/contact/" class="btn btn-primary nav-cta-mobile">Neem contact op</a>
       </nav>
 
-      <a href="#contact" class="btn btn-primary header-cta">Neem contact op</a>
+      <a href="/contact/" class="btn btn-primary header-cta">Neem contact op</a>
 
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu openen">
         <span></span><span></span><span></span>
@@ -245,7 +245,7 @@
               ondertekend contract en geborgde kwaliteit.
             </p>
             <div class="hero-actions">
-              <a href="#contact" class="btn btn-primary">Plan een kennismaking</a>
+              <a href="/contact/" class="btn btn-primary">Plan een kennismaking</a>
               <a href="#diensten" class="btn btn-ghost">Bekijk onze diensten</a>
             </div>
           </div>
@@ -339,7 +339,7 @@
             <li>Onvoldoende zicht op kwaliteit en leveranciersprestaties</li>
             <li>Behoefte aan onafhankelijke, deskundige begeleiding</li>
           </ul>
-          <a href="#contact" class="btn btn-primary btn-block">Bespreek uw situatie</a>
+          <a href="/contact/" class="btn btn-primary btn-block">Bespreek uw situatie</a>
         </aside>
       </div>
     </section>
@@ -674,96 +674,50 @@
           <h2 id="cta-title">Staat er een facilitaire aanbesteding op de planning?</h2>
           <p>Plan vrijblijvend een kennismaking. We denken graag met u mee — zonder verplichtingen.</p>
         </div>
-        <a href="#contact" class="btn btn-light">Plan een kennismaking</a>
+        <a href="/contact/" class="btn btn-light">Plan een kennismaking</a>
       </div>
     </section>
 
-    <!-- ================= CONTACT ================= -->
+    <!-- ================= CONTACT (compact) =================
+         Het volledige formulier staat op /contact/. Het id blijft hier bestaan
+         zodat oudere links naar /#contact netjes blijven landen. -->
     <section id="contact" class="section section-alt" aria-labelledby="contact-title">
-      <div class="container grid-two contact-grid">
+      <div class="container contact-compact">
         <div>
           <p class="section-eyebrow">Contact</p>
-          <h2 id="contact-title">Bespreek uw facilitaire vraagstuk</h2>
+          <h2 id="contact-title">Bespreek uw schoonmaakvraagstuk</h2>
           <p>
-            Heeft u een aanbesteding op de planning of wilt u uw facilitaire contracten
-            eens onafhankelijk laten toetsen? Laat het ons weten — we reageren doorgaans
-            binnen één werkdag.
+            Staat er een aanbesteding op de planning, loopt uw contract af of wilt u uw
+            huidige afspraken eens onafhankelijk laten toetsen? Leg het ons vrijblijvend
+            voor — we reageren doorgaans binnen één werkdag.
           </p>
-
-          <ul class="contact-details">
-            <li>
-              <span class="contact-label">E-mail</span>
-              <a href="mailto:info@secbv.nl">info@secbv.nl</a>
-            </li>
-            <li>
-              <span class="contact-label">Telefoon</span>
-              <span class="contact-phones">
-                <a href="tel:+31650748992">06-50748992</a>
-                <a href="tel:+31638323667">06-38323667</a>
-              </span>
-            </li>
-            <li>
-              <span class="contact-label">Adres</span>
-              <address>De Tuinderij 19<br />3833 SC Leusden</address>
-            </li>
-            <li>
-              <span class="contact-label">KvK</span>
-              <span>42080375</span>
-            </li>
-          </ul>
+          <div class="contact-compact-actions">
+            <a href="/contact/" class="btn btn-primary">Neem contact op</a>
+            <a href="mailto:info@secbv.nl" class="btn btn-outline">Mail S.E.C. direct</a>
+          </div>
         </div>
 
-        <div class="contact-card">
-          <form class="contact-form" id="contact-form" name="contact" action="/api/contact.php" method="POST">
-            <!-- Honeypot tegen spam: door mensen onzichtbaar, door bots vaak ingevuld -->
-            <div class="hidden" aria-hidden="true" style="position:absolute;left:-9999px;">
-              <label>Laat dit veld leeg <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
-            </div>
-
-            <p class="form-hint">Velden met <span class="req">*</span> zijn verplicht.</p>
-            <div class="form-row">
-              <label for="naam">Naam <span class="req" aria-hidden="true">*</span></label>
-              <input type="text" id="naam" name="naam" autocomplete="name" placeholder="Uw naam" required />
-            </div>
-            <div class="form-row">
-              <label for="organisatie">Organisatie</label>
-              <input type="text" id="organisatie" name="organisatie" autocomplete="organization" placeholder="Uw organisatie" />
-            </div>
-            <div class="form-row form-row-split">
-              <div>
-                <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="naam@organisatie.nl" required />
-              </div>
-              <div>
-                <label for="telefoon">Telefoon</label>
-                <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" placeholder="06-..." />
-              </div>
-            </div>
-            <div class="form-row">
-              <label for="onderwerp">Onderwerp</label>
-              <select id="onderwerp" name="onderwerp">
-                <option value="Aanbestedingsbegeleiding">Aanbestedingsbegeleiding</option>
-                <option value="Schoonmaakonderhoud">Schoonmaakonderhoud</option>
-                <option value="Contract- &amp; kwaliteitsbeheer">Contract- &amp; kwaliteitsbeheer</option>
-                <option value="Onafhankelijk advies">Onafhankelijk advies</option>
-                <option value="Kennismaking">Kennismaking</option>
-                <option value="Overig">Overig</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="bericht">Bericht <span class="req" aria-hidden="true">*</span></label>
-              <textarea id="bericht" name="bericht" rows="4" placeholder="Waarmee kunnen we u helpen?" required></textarea>
-            </div>
-            <p id="form-status" role="status" aria-live="polite" class="form-status" hidden></p>
-            <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
-              <span id="submit-label">Verstuur bericht</span>
-            </button>
-            <p class="form-note">
-              Liever direct contact? Mail naar <a href="mailto:info@secbv.nl">info@secbv.nl</a>
-              of bel <a href="tel:+31650748992">06-50748992</a> / <a href="tel:+31638323667">06-38323667</a>.
-            </p>
-          </form>
-        </div>
+        <ul class="contact-compact-details" aria-label="Contactgegevens">
+          <li>
+            <span class="contact-label">E-mail</span>
+            <a href="mailto:info@secbv.nl">info@secbv.nl</a>
+          </li>
+          <li>
+            <span class="contact-label">Telefoon</span>
+            <span>
+              <a href="tel:+31650748992">06-50748992</a><br />
+              <a href="tel:+31638323667">06-38323667</a>
+            </span>
+          </li>
+          <li>
+            <span class="contact-label">Adres</span>
+            <address>De Tuinderij 19<br />3833 SC Leusden</address>
+          </li>
+          <li>
+            <span class="contact-label">KvK</span>
+            <span>42080375</span>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -798,7 +752,7 @@
           <li><a href="/kennisbank/">Kennisbank</a></li>
           <li><a href="/vergelijk-schoonmaakadviesbureaus/">Adviesbureaus vergelijken</a></li>
           <li><a href="/#faq">Veelgestelde vragen</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
 
@@ -822,6 +776,6 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="/script.js?v=3" defer></script>
 </body>
 </html>

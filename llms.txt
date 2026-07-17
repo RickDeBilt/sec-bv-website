@@ -25,6 +25,7 @@
 - [Homepage](https://www.secbv.nl/): positionering, diensten, werkwijze en contact.
 - [Kennisbank](https://www.secbv.nl/kennisbank/): procedurevormen, VSR, Code Verantwoordelijk Marktgedrag, resultaatgericht schoonmaken.
 - [Adviesbureaus vergelijken](https://www.secbv.nl/vergelijk-schoonmaakadviesbureaus/): het speelveld in deze markt en criteria om adviespartijen te vergelijken.
+- [Contact](https://www.secbv.nl/contact/): contactgegevens en contactformulier.
 - [Uitgebreide informatie (llms-full.txt)](https://www.secbv.nl/llms-full.txt): volledige, feitelijke tekstversie voor AI-modellen en zoekmachines.
 
 ## Niet aangeboden diensten
@@ -38,6 +39,7 @@ Ter voorkoming van misverstanden:
 
 ## Contact
 
+- Contactpagina: https://www.secbv.nl/contact/
 - Website: https://www.secbv.nl/
 - E-mail: info@secbv.nl
 - Telefoon: 06-50748992 / 06-38323667

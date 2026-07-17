@@ -78,6 +78,92 @@
     });
   }
 
+  /* ---------- Inhoudsopgave in de aside ----------
+     Gevuld vanuit de H2's die al op de pagina staan, zodat de lijst niet
+     per pagina onderhouden hoeft te worden en nooit uit de pas kan lopen
+     met de content. Staat JS uit, dan blijft .toc leeg en verbergt de CSS
+     hem (.toc:empty) — er ontstaat dus geen kapot ogend blok. */
+  var tocEl = document.querySelector(".toc");
+  var proseEl = document.querySelector(".page-layout .prose");
+
+  if (tocEl && proseEl) {
+    var headings = Array.prototype.slice.call(proseEl.querySelectorAll("h2"));
+
+    var slugify = function (text) {
+      return text
+        .toLowerCase()
+        .replace(/[à-å]/g, "a")
+        .replace(/[è-ë]/g, "e")
+        .replace(/[ì-ï]/g, "i")
+        .replace(/[ò-ö]/g, "o")
+        .replace(/[ù-ü]/g, "u")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    };
+
+    if (headings.length > 1) {
+      var list = document.createElement("ol");
+      var used = {};
+
+      headings.forEach(function (h) {
+        var id = h.id;
+        if (!id) {
+          id = slugify(h.textContent) || "sectie";
+          // Voorkom dubbele ids bij gelijke koppen.
+          if (used[id]) {
+            used[id] += 1;
+            id = id + "-" + used[id];
+          } else {
+            used[id] = 1;
+          }
+          h.id = id;
+        }
+
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "#" + id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+
+      var title = document.createElement("p");
+      title.className = "toc-title";
+      title.textContent = "Op deze pagina";
+      tocEl.appendChild(title);
+      tocEl.appendChild(list);
+
+      // Markeer de kop die momenteel in beeld is.
+      if ("IntersectionObserver" in window) {
+        var links = {};
+        Array.prototype.forEach.call(list.querySelectorAll("a"), function (a) {
+          links[a.getAttribute("href").slice(1)] = a;
+        });
+
+        var setActive = function (id) {
+          Object.keys(links).forEach(function (key) {
+            links[key].classList.toggle("is-active", key === id);
+          });
+        };
+
+        var spy = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                setActive(entry.target.id);
+              }
+            });
+          },
+          { rootMargin: "-90px 0px -70% 0px", threshold: 0 }
+        );
+
+        headings.forEach(function (h) {
+          spy.observe(h);
+        });
+      }
+    }
+  }
+
   /* ---------- Jaartal footer ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) {

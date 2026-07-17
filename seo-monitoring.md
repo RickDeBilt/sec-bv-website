@@ -46,6 +46,7 @@ niet met elkaar concurreren op hetzelfde woord.
 | onafhankelijke consultancy | commercieel | `/` |
 | vergelijk schoonmaakadviesbureaus | oriënterend | `/vergelijk-schoonmaakadviesbureaus/` |
 | alternatief schoonmaakadviesbureau | oriënterend | `/vergelijk-schoonmaakadviesbureaus/` |
+| s.e.c. bv contact / schoonmaak expertise centrum contact | navigatie | `/contact/` |
 
 ### Realistische verwachting
 
@@ -141,22 +142,29 @@ Afvinken; kost ongeveer een kwartier.
 
 ```
 [ ] Search Console → Prestaties: impressies/klikken/positie t.o.v. vorige 28 dagen
-[ ] Search Console → Pagina's: alle 10 pagina's geïndexeerd, geen nieuwe fouten
+[ ] Search Console → Pagina's: alle 11 pagina's geïndexeerd, geen nieuwe fouten
 [ ] Search Console → Zoekopdrachten: nieuwe termen die we nog niet bedienen?
 [ ] Bing Webmaster Tools: geen crawlfouten
-[ ] https://www.secbv.nl/sitemap.xml laadt en bevat 10 URL's
+[ ] https://www.secbv.nl/sitemap.xml laadt en bevat 11 URL's
 [ ] https://www.secbv.nl/robots.txt laadt en verwijst naar sitemap.xml
 [ ] https://www.secbv.nl/llms.txt laadt en verwijst naar llms-full.txt
 [ ] https://www.secbv.nl/llms-full.txt laadt
 [ ] Geen verwijzingen naar technische installaties op de site (zie controle hieronder)
 [ ] "Materkey" komt nergens voor (zie controle hieronder)
-[ ] Contactformulier: testbericht verstuurd en aangekomen op info@secbv.nl
+[ ] Contactformulier op /contact/: testbericht verstuurd en aangekomen op info@secbv.nl
 [ ] Bedanktpagina verschijnt na verzending
-[ ] Hoofd-CTA's werken: "Plan een kennismaking", "Neem contact op", dienstenkaarten
+[ ] Hoofd-CTA's werken: "Neem contact op", "Plan een kennismaking", dienstenkaarten
 [ ] Mobiel menu opent en sluit op een subpagina (niet alleen op de homepage)
+[ ] Kruimelpad toont chevrons, geen genummerde lijst (zie cache-waarschuwing hieronder)
 [ ] Pagina's laden snel (PageSpeed Insights, mobiel, minimaal 90)
 [ ] Contentkansen genoteerd voor de volgende ronde
 ```
+
+> **Ziet de site er kapot uit na een upload?** Kijk eerst naar de cache, niet naar de CSS.
+> `.htaccess` cachet CSS en JS een jaar; HTML niet. Een terugkerende bezoeker krijgt dan
+> nieuwe HTML met oude CSS. Symptoom: kruimelpaden als genummerde lijst, kaarten zonder
+> opmaak. Test altijd in een **privévenster** of met Ctrl+F5, en verhoog bij elke
+> CSS/JS-wijziging het versienummer in `?v=` (zie README.md).
 
 ### Snelle controle op verboden termen
 
@@ -235,3 +243,8 @@ Geen automatische live-wijzigingen. De volgorde is altijd:
 - Toevoegen aan `$WebrootDirs` in `deploy.ps1` — **anders wordt de map niet meegenomen
   in de upload** en krijgt de bezoeker een 404.
 - Indexering aanvragen in Search Console en Bing.
+
+### Bij wijziging van styles.css of script.js ook doen
+
+- **Verhoog het versienummer in `?v=`** in alle HTML (zie README.md voor het commando).
+  Zonder dat zien terugkerende bezoekers tot een jaar lang de oude CSS.

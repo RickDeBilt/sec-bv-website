@@ -64,6 +64,7 @@ pagina is een eigen `index.html` in een eigen map, zodat de URL op een `/` eindi
 | `/kwaliteitsbeheer-schoonmaak/` | idem | Meten en bijsturen (VSR) |
 | `/kennisbank/` | idem | Achtergrond: procedures, VSR, Code Verantwoordelijk Marktgedrag |
 | `/vergelijk-schoonmaakadviesbureaus/` | idem | Marktoverzicht en keuzecriteria |
+| `/contact/` | idem | Contactgegevens + het contactformulier |
 
 Losse pagina: `bedankt.html` — bevestigingspagina na verzending. Staat op `noindex`
 en hoort daarom **niet** in `sitemap.xml`.
@@ -112,6 +113,32 @@ De contactgegevens staan op twee plekken in `index.html`: in de **contactsectie*
 
 > Let op: de `tel:`-links gebruiken het internationale formaat (`+316...`),
 > terwijl de weergegeven tekst het Nederlandse formaat (`06-...`) toont.
+
+### Cache-busting: bij élke wijziging aan styles.css of script.js
+
+`.htaccess` cachet CSS en JS **een jaar** (`ExpiresByType text/css "access plus 1 year"`),
+terwijl HTML niet gecacht wordt. Wijzig je de CSS zonder de versie te verhogen, dan
+krijgt een terugkerende bezoeker **nieuwe HTML met oude CSS** — en dat sloopt de layout.
+Dat is geen theorie: het gebeurde direct na het toevoegen van de SEO-pagina's, waarbij
+kruimelpaden als genummerde lijst verschenen omdat de nieuwe `.breadcrumb`-regels
+ontbraken in de gecachte CSS.
+
+Alle pagina's verwijzen daarom naar `/styles.css?v=N` en `/script.js?v=N`. **De huidige
+versie is `v=3`.** Verhoog dat nummer bij elke wijziging aan een van beide bestanden:
+
+```powershell
+# Pas $from/$to aan; $from is de versie die er nu staat.
+$from = 3; $to = 4
+Get-ChildItem -Recurse -Include *.html -File |
+  Where-Object { $_.FullName -notmatch '\\deploy\\' } |
+  ForEach-Object {
+    (Get-Content $_.FullName -Raw) -replace "\?v=$from`"", "?v=$to`"" |
+      Set-Content $_.FullName -NoNewline -Encoding UTF8
+  }
+```
+
+Controleer daarna dat er geen `?v=` van de oude versie is blijven staan, en werk de
+versie hierboven in dit document bij.
 
 ### Huisstijl / kleuren
 

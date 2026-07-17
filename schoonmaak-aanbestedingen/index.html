@@ -27,7 +27,7 @@
 
   <link rel="icon" type="image/png" href="/assets/logo-sec.png" />
   <link rel="apple-touch-icon" href="/assets/logo-sec.png" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/styles.css?v=3" />
 
   <script type="application/ld+json">
   {
@@ -81,12 +81,12 @@
           <li><a href="/schoonmaakadvies/">Schoonmaakadvies</a></li>
           <li><a href="/contractbeheer-schoonmaak/">Contract &amp; kwaliteit</a></li>
           <li><a href="/kennisbank/">Kennisbank</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
-        <a href="/#contact" class="btn btn-primary nav-cta-mobile">Neem contact op</a>
+        <a href="/contact/" class="btn btn-primary nav-cta-mobile">Neem contact op</a>
       </nav>
 
-      <a href="/#contact" class="btn btn-primary header-cta">Neem contact op</a>
+      <a href="/contact/" class="btn btn-primary header-cta">Neem contact op</a>
 
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu openen">
         <span></span><span></span><span></span>
@@ -114,14 +114,15 @@
           waar trajecten in de praktijk op stuklopen.
         </p>
         <div class="page-hero-actions">
-          <a href="/#contact" class="btn btn-primary">Bespreek uw aanbesteding</a>
+          <a href="/contact/" class="btn btn-primary">Bespreek uw aanbesteding</a>
           <a href="/aanbestedingsbegeleiding-schoonmaak/" class="btn btn-ghost">Bekijk onze begeleiding</a>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container prose">
+      <div class="container page-layout">
+        <div class="prose">
 
         <h2>Wat is een schoonmaakaanbesteding?</h2>
         <p>
@@ -148,15 +149,44 @@
           eenzelfde structuur, simpelweg omdat het tot betere inschrijvingen leidt.
         </p>
 
-        <h3>Europese aanbesteding</h3>
-        <p>
-          Verplicht voor aanbestedende diensten zodra de geraamde opdrachtwaarde over de
-          looptijd boven de Europese drempel voor diensten uitkomt. De opdracht wordt
-          Europees gepubliceerd, iedere geïnteresseerde partij mag inschrijven, en het
-          proces is gebonden aan vaste termijnen en strikte transparantie-eisen. Reken op
-          een doorlooptijd van vier tot zes maanden vanaf publicatie, plus de
-          voorbereiding daarvoor.
-        </p>
+        <div class="info-blocks">
+          <div class="info-block">
+            <h3>Europese aanbesteding</h3>
+            <p>
+              Verplicht voor aanbestedende diensten zodra de geraamde opdrachtwaarde over de
+              looptijd boven de Europese drempel voor diensten uitkomt. De opdracht wordt
+              Europees gepubliceerd, iedere geïnteresseerde partij mag inschrijven, en het
+              proces is gebonden aan vaste termijnen en strikte transparantie-eisen. Reken op
+              een doorlooptijd van vier tot zes maanden vanaf publicatie, plus de
+              voorbereiding daarvoor.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3>Openbare (nationale) aanbesteding</h3>
+            <p>
+              Onder de Europese drempel, maar wel openbaar gepubliceerd. Iedere partij kan
+              inschrijven. Deze vorm geeft veel marktwerking en een breed veld aan
+              inschrijvers, maar vraagt om een uitvraag die scherp genoeg is om die grote
+              hoeveelheid inschrijvingen ook werkelijk te kunnen beoordelen.
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3>Onderhandse aanbesteding</h3>
+            <p>
+              U nodigt zelf een beperkt aantal partijen uit — meestal drie tot vijf. Meervoudig
+              onderhands is de meest gebruikte vorm bij kleinere en middelgrote
+              schoonmaakcontracten. Het traject is korter en werkbaarder, en u kunt gericht
+              partijen benaderen die bij uw type gebouw en organisatie passen.
+            </p>
+            <p>
+              De keerzijde: de kwaliteit van uw uitnodigingslijst bepaalt de uitkomst. Nodigt u
+              de verkeerde partijen uit, dan helpt geen enkel beoordelingsmodel u nog.
+            </p>
+          </div>
+        </div>
+
         <div class="callout">
           <p>
             <strong>Let op de raming.</strong> De drempelbedragen worden elke twee jaar
@@ -166,24 +196,6 @@
             Controleer altijd de actueel geldende drempel voordat u de procedure kiest.
           </p>
         </div>
-
-        <h3>Openbare (nationale) aanbesteding</h3>
-        <p>
-          Onder de Europese drempel, maar wel openbaar gepubliceerd. Iedere partij kan
-          inschrijven. Deze vorm geeft veel marktwerking en een breed veld aan
-          inschrijvers, maar vraagt om een uitvraag die scherp genoeg is om die grote
-          hoeveelheid inschrijvingen ook werkelijk te kunnen beoordelen.
-        </p>
-
-        <h3>Onderhandse aanbesteding</h3>
-        <p>
-          U nodigt zelf een beperkt aantal partijen uit — meestal drie tot vijf. Meervoudig
-          onderhands is de meest gebruikte vorm bij kleinere en middelgrote
-          schoonmaakcontracten. Het traject is korter en werkbaarder, en u kunt gericht
-          partijen benaderen die bij uw type gebouw en organisatie passen. De keerzijde:
-          de kwaliteit van uw uitnodigingslijst bepaalt de uitkomst. Nodigt u de verkeerde
-          partijen uit, dan helpt geen enkel beoordelingsmodel u nog.
-        </p>
 
         <h2>Welke procedure past bij uw organisatie?</h2>
         <p>
@@ -203,29 +215,42 @@
         </p>
 
         <h2>Het traject in vier stappen</h2>
-        <ol>
-          <li>
-            <strong>Analyse en inventarisatie.</strong> Wat maakt u nu schoon, tegen welke
-            kosten, op welk niveau en met welke knelpunten? Zonder een feitelijk beeld van
-            de huidige situatie is elke uitvraag een gok. Hier horen ook meetgegevens en
-            klachtenregistratie bij.
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3>Analyse en inventarisatie</h3>
+            <p>
+              Wat maakt u nu schoon, tegen welke kosten, op welk niveau en met welke
+              knelpunten? Zonder een feitelijk beeld van de huidige situatie is elke
+              uitvraag een gok. Hier horen ook meetgegevens en klachtenregistratie bij.
+            </p>
           </li>
-          <li>
-            <strong>Voorbereiding van de uitvraag.</strong> Het programma van eisen, het
-            beoordelingsmodel en de gunningscriteria. Dit is de fase die de uitkomst
-            bepaalt en die tegelijk het vaakst wordt afgeraffeld.
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3>Voorbereiding van de uitvraag</h3>
+            <p>
+              Het programma van eisen, het beoordelingsmodel en de gunningscriteria. Dit is
+              de fase die de uitkomst bepaalt en die tegelijk het vaakst wordt afgeraffeld.
+            </p>
           </li>
-          <li>
-            <strong>Selectie en gunning.</strong> Inschrijvingen beoordelen volgens het
-            vooraf vastgestelde model, presentaties voeren, en de keuze onderbouwen op een
-            manier die ook standhoudt als een afgewezen partij bezwaar maakt. Zie
-            <a href="/leveranciersselectie-schoonmaak/">leveranciersselectie schoonmaak</a>.
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3>Selectie en gunning</h3>
+            <p>
+              Inschrijvingen beoordelen volgens het vooraf vastgestelde model, presentaties
+              voeren, en de keuze onderbouwen op een manier die ook standhoudt als een
+              afgewezen partij bezwaar maakt. Zie
+              <a href="/leveranciersselectie-schoonmaak/">leveranciersselectie schoonmaak</a>.
+            </p>
           </li>
-          <li>
-            <strong>Implementatie en borging.</strong> De overgang naar de nieuwe
-            dienstverlener en het bewaken van wat er is afgesproken. Zie
-            <a href="/contractbeheer-schoonmaak/">contractbeheer</a> en
-            <a href="/kwaliteitsbeheer-schoonmaak/">kwaliteitsbeheer</a>.
+          <li class="step">
+            <span class="step-num">4</span>
+            <h3>Implementatie en borging</h3>
+            <p>
+              De overgang naar de nieuwe dienstverlener en het bewaken van wat er is
+              afgesproken. Zie <a href="/contractbeheer-schoonmaak/">contractbeheer</a> en
+              <a href="/kwaliteitsbeheer-schoonmaak/">kwaliteitsbeheer</a>.
+            </p>
           </li>
         </ol>
 
@@ -234,7 +259,7 @@
           De fouten die wij het vaakst tegenkomen zijn zelden juridisch van aard. Ze zitten
           in de inhoud:
         </p>
-        <ul>
+        <ul class="pitfall-list">
           <li>
             <strong>Te laat beginnen.</strong> Een Europees traject vraagt inclusief
             voorbereiding al snel acht tot twaalf maanden. Wie drie maanden voor het
@@ -301,6 +326,18 @@
           </li>
         </ul>
 
+        </div>
+
+        <aside class="page-aside" aria-label="Paginanavigatie en contact">
+          <nav class="toc" aria-label="Op deze pagina"></nav>
+
+          <div class="aside-cta">
+            <h2>Staat er een schoonmaakaanbesteding op de planning?</h2>
+            <p>Bespreek vrijblijvend welke procedure en aanpak bij uw organisatie passen.</p>
+            <a href="/contact/" class="btn btn-primary">Neem contact op</a>
+            <p class="aside-cta-direct">Of bel <a href="tel:+31650748992">06-50748992</a></p>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -310,7 +347,7 @@
           <h2 id="cta-title">Staat er een schoonmaakaanbesteding op de planning?</h2>
           <p>Plan vrijblijvend een kennismaking. We denken graag met u mee — zonder verplichtingen.</p>
         </div>
-        <a href="/#contact" class="btn btn-light">Plan een kennismaking</a>
+        <a href="/contact/" class="btn btn-light">Plan een kennismaking</a>
       </div>
     </section>
   </main>
@@ -344,7 +381,7 @@
           <li><a href="/kennisbank/">Kennisbank</a></li>
           <li><a href="/vergelijk-schoonmaakadviesbureaus/">Adviesbureaus vergelijken</a></li>
           <li><a href="/#faq">Veelgestelde vragen</a></li>
-          <li><a href="/#contact">Contact</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </nav>
 
@@ -368,6 +405,6 @@
     </div>
   </footer>
 
-  <script src="/script.js" defer></script>
+  <script src="/script.js?v=3" defer></script>
 </body>
 </html>

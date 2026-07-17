@@ -33,7 +33,8 @@ function respond(bool $ok, string $message, bool $wantsJson, int $status = 200):
     } elseif ($ok) {
         header('Location: /bedankt.html');
     } else {
-        header('Location: /index.html?verzonden=mislukt#contact');
+        // Terug naar de contactpagina; daar staat het formulier.
+        header('Location: /contact/?verzonden=mislukt');
     }
     exit;
 }

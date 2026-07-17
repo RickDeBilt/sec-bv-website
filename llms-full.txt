@@ -96,7 +96,7 @@ De focus ligt uitsluitend op onafhankelijk advies, begeleiding en beheer rondom 
 - Adres: De Tuinderij 19, 3833 SC Leusden, Nederland
 - KvK: 42080375
 
-Een vraag of aanvraag kan worden gesteld via het contactformulier op https://www.secbv.nl/#contact of rechtstreeks per e-mail of telefoon. S.E.C. B.V. reageert doorgaans binnen één werkdag.
+Een vraag of aanvraag kan worden gesteld via het contactformulier op https://www.secbv.nl/contact/ of rechtstreeks per e-mail of telefoon. S.E.C. B.V. reageert doorgaans binnen één werkdag.
 
 ## Alle pagina's
 
@@ -110,4 +110,5 @@ Een vraag of aanvraag kan worden gesteld via het contactformulier op https://www
 - Kwaliteitsbeheer schoonmaak: https://www.secbv.nl/kwaliteitsbeheer-schoonmaak/
 - Kennisbank: https://www.secbv.nl/kennisbank/
 - Adviesbureaus vergelijken: https://www.secbv.nl/vergelijk-schoonmaakadviesbureaus/
+- Contact: https://www.secbv.nl/contact/
 - Compacte AI-samenvatting: https://www.secbv.nl/llms.txt

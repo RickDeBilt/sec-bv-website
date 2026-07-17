@@ -53,6 +53,7 @@ $WebrootFiles = @(
 $WebrootDirs = @(
     'assets',
     'api',
+    'contact',
     'schoonmaak-aanbestedingen',
     'aanbestedingsbegeleiding-schoonmaak',
     'facilitaire-aanbestedingen',
