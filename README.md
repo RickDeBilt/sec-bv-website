@@ -1,10 +1,23 @@
 # S.E.C. B.V. — Website
 
-Snelle, moderne one-page website voor **S.E.C. B.V. — Schoonmaak Expertise Centrum**.
+Snelle, moderne statische website voor **S.E.C. B.V. — Schoonmaak Expertise Centrum**.
 
-S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij facilitaire
-aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen:
-contractbeheer, kwaliteitsmetingen en leveranciersselectie.
+S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij schoonmaak- en
+facilitaire aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen:
+contractbeheer, kwaliteitsbeheer en leveranciersselectie.
+
+> **S.E.C. B.V. voert géén technische installaties uit** en doet géén installatiebeheer
+> of onderhoud daarvan. Houd de site, `llms.txt` en `llms-full.txt` vrij van
+> verwijzingen daarnaar. Zie `seo-monitoring.md` voor de controlecommando's.
+
+## Openstaande actiepunten
+
+- **Navragen bij klant of "Materkey" mogelijk "MasterKey" moet zijn.** De naam
+  "Materkey" uit de klantinput bestaat niet aantoonbaar in de Nederlandse markt;
+  vermoedelijk is MasterKey (masterkey.nl, Apeldoorn) bedoeld. **Zolang de klant dit
+  niet bevestigt, wordt de naam nergens gepubliceerd.**
+- **Claim "30+ jaar ervaring"** op de homepage laten bevestigen door de klant.
+- **Kennisbankartikelen**: voorstel ligt klaar in `seo-monitoring.md`, wacht op akkoord.
 
 ## Doel
 
@@ -17,8 +30,8 @@ contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 
 | Bestand           | Omschrijving                                              |
 | ----------------- | -------------------------------------------------------- |
-| `index.html`      | Volledige one-page website (semantische HTML)            |
-| `bedankt.html`    | Bedanktpagina na verzending van het contactformulier     |
+| `index.html`      | Homepage (positionering + doorverwijzing naar de dienstpagina's) |
+| `bedankt.html`    | Bedanktpagina na verzending van het contactformulier (`noindex`) |
 | `styles.css`      | Design system + styling (CSS-variabelen, mobile-first)   |
 | `script.js`       | Kleine vanilla JS: mobiel menu, scroll-reveal, jaartal, formulier |
 | `assets/`         | Media, waaronder `logo-sec.png`                          |
@@ -28,26 +41,51 @@ contractbeheer, kwaliteitsmetingen en leveranciersselectie.
 | `.htaccess`       | Cache/gzip + beveiliging van het configbestand           |
 | `llms.txt`        | Compacte AI-samenvatting (Markdown) voor AI-modellen     |
 | `llms-full.txt`   | Uitgebreide, feitelijke AI-tekstversie van de website    |
-| `sitemap.xml`     | XML-sitemap met de belangrijkste URL's                   |
+| `sitemap.xml`     | XML-sitemap met alle indexeerbare pagina's               |
 | `robots.txt`      | Crawl-richtlijnen + verwijzing naar de sitemap           |
+| `deploy.ps1`      | Bouwt `deploy/` en `sec-bv-upload.zip` (whitelist)       |
+| `seo-monitoring.md` | Zoekwoorden, wekelijkse checklist, AI-tests, workflow  |
 | `README.md`       | Dit document                                             |
 
-## Secties (one-page)
+## Paginastructuur
 
-1. Header met logo, navigatie en CTA
-2. Hero met headline, subtekst en CTA's
-3. Introductie / Over S.E.C. B.V.
-4. Dienstenoverzicht
-5. Aanbestedingsbegeleiding
-6. Waarom kiezen voor S.E.C.
-7. Werkwijze (4 stappen)
-8. Sectoren / opdrachtgevers
-9. Veelgestelde vragen (FAQ, native `<details>`-accordeon)
-10. CTA-sectie
-11. Contactblok (werkend SMTP-formulier via PHPMailer + mailto/tel)
-12. Footer
+De site was oorspronkelijk one-page en is uitgebreid met SEO-landingspagina's. Elke
+pagina is een eigen `index.html` in een eigen map, zodat de URL op een `/` eindigt.
 
-Losse pagina: `bedankt.html` — bevestigingspagina waar bezoekers na verzending landen.
+| URL | Map | Doel |
+| --- | --- | ---- |
+| `/` | `index.html` | Positioneren en doorlinken. Rankt bewust niet op alles. |
+| `/schoonmaak-aanbestedingen/` | idem | Hub: procedurevormen (Europees/openbaar/onderhands) |
+| `/aanbestedingsbegeleiding-schoonmaak/` | idem | De dienst: wat wij doen tijdens het traject |
+| `/facilitaire-aanbestedingen/` | idem | Breder dan schoonmaak; percelen en integrale contracten |
+| `/schoonmaakadvies/` | idem | Schoonmaakconsultancy, van analyse tot borging |
+| `/leveranciersselectie-schoonmaak/` | idem | Inschrijvingen eerlijk vergelijken |
+| `/contractbeheer-schoonmaak/` | idem | Grip na de gunning |
+| `/kwaliteitsbeheer-schoonmaak/` | idem | Meten en bijsturen (VSR) |
+| `/kennisbank/` | idem | Achtergrond: procedures, VSR, Code Verantwoordelijk Marktgedrag |
+| `/vergelijk-schoonmaakadviesbureaus/` | idem | Marktoverzicht en keuzecriteria |
+
+Losse pagina: `bedankt.html` — bevestigingspagina na verzending. Staat op `noindex`
+en hoort daarom **niet** in `sitemap.xml`.
+
+### Secties op de homepage
+
+Header · Hero · Over S.E.C. B.V. (`#over`) · Diensten (`#diensten`, 7 kaarten die
+doorlinken) · Aanbestedingsbegeleiding (`#aanbesteding`) · Waarom S.E.C. (`#waarom`) ·
+Werkwijze (`#werkwijze`) · Sectoren (`#sectoren`) · FAQ (`#faq`) · CTA · Contact
+(`#contact`) · Footer.
+
+Subpagina's linken naar deze ankers met een absoluut pad (`/#contact`), niet met `#contact`.
+
+### Een pagina toevoegen
+
+1. Nieuwe map met `index.html`, gebaseerd op een bestaande pagina (header, footer,
+   breadcrumb en JSON-LD zijn identiek van opzet).
+2. Opnemen in de **footernavigatie op álle pagina's** — de footer is de plek waar de
+   volledige linkstructuur staat; de hoofdnavigatie blijft bewust beperkt tot zes items.
+3. Toevoegen aan `sitemap.xml`, `llms.txt` en `llms-full.txt`.
+4. **Toevoegen aan `$WebrootDirs` in `deploy.ps1`** — anders wordt de map niet
+   geüpload en krijgt de bezoeker een 404.
 
 ## Lokaal bekijken
 
@@ -130,8 +168,10 @@ Direct mailen of bellen kan altijd: `info@secbv.nl`, `06-50748992` / `06-3832366
 
 - Semantische HTML5 met correcte heading-hiërarchie
 - Mobile-first, responsive CSS (Grid/Flexbox)
-- `meta title`, `meta description`, Open Graph- en Twitter-tags
-- JSON-LD structured data (`ProfessionalService`)
+- `meta title`, `meta description`, Open Graph- en Twitter-tags per pagina
+- JSON-LD structured data: `ProfessionalService` + `WebSite` + `FAQPage` op de homepage,
+  `WebPage` + `BreadcrumbList` op elke subpagina. Alleen feitelijk — geen reviews of
+  ratings, en geen relaties met andere organisaties
 - Toegankelijk: skip-link, focus-states, aria-labels, respecteert `prefers-reduced-motion`
 - Geen externe frameworks of zware libraries
 
@@ -158,8 +198,27 @@ Belangrijk bij het onderhouden:
 - Werk `lastmod` in `sitemap.xml` bij wanneer de inhoud wijzigt (formaat `JJJJ-MM-DD`).
 - Wijzig je iets, werk dan ook de kopie in `deploy/` bij (zie hieronder).
 
-## Uitbreiden naar meerdere pagina's
+## Deployen
 
-De one-page structuur is opgezet met duidelijke secties en anchors. Losse pagina's
-(Over ons, Diensten, Werkwijze, Contact) zijn later eenvoudig af te splitsen door de
-betreffende sectie naar een eigen HTML-bestand te verplaatsen en de navigatie te koppelen.
+`deploy/` is een **kopie van de webroot** en wordt gegenereerd — bewerk daar niets
+met de hand. Draai vanuit de projectroot:
+
+```powershell
+.\deploy.ps1            # spiegelt naar deploy\ en maakt sec-bv-upload.zip
+.\deploy.ps1 -SkipZip   # alleen de deploy-map bijwerken
+```
+
+Het script werkt met een **whitelist** (`$WebrootFiles` en `$WebrootDirs`): alles wat
+daar niet in staat, komt niet in de webroot. Dat is bewust — `private\` bevat de
+SMTP-inloggegevens en mag er nooit in belanden. Het script breekt af als dat toch
+gebeurt, en als een bestand of map uit de whitelist ontbreekt.
+
+Upload daarna de **inhoud** van `sec-bv-upload.zip` naar
+`/domains/secbv.nl/public_html/`. `private\contact-config.php` blijft daarbuiten,
+in `/domains/secbv.nl/private/`.
+
+## SEO-onderhoud
+
+Zie **`seo-monitoring.md`** voor de zoekwoordmapping, de wekelijkse checklist,
+de handmatige AI-tests en de workflow. Kern: **geen automatische live-wijzigingen** —
+lokaal wijzigen, een mens laat het na, committen, deployen.

@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>S.E.C. B.V. — Onafhankelijk advies bij facilitaire aanbestedingen</title>
-  <meta name="description" content="S.E.C. B.V. — Schoonmaak Expertise Centrum begeleidt en adviseert organisaties onafhankelijk bij facilitaire aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen. Van analyse tot contract." />
+  <title>Onafhankelijk schoonmaakadvies en aanbestedingen | S.E.C. B.V.</title>
+  <meta name="description" content="S.E.C. B.V. begeleidt organisaties onafhankelijk bij schoonmaak- en facilitaire aanbestedingen: van analyse en programma van eisen tot leveranciersselectie, contract en kwaliteitsborging." />
   <meta name="theme-color" content="#0D7377" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="S.E.C. B.V. — Schoonmaak Expertise Centrum" />
@@ -42,11 +42,14 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://www.secbv.nl/#organisatie",
     "name": "S.E.C. B.V. — Schoonmaak Expertise Centrum",
-    "description": "Onafhankelijk advies en begeleiding bij facilitaire aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen.",
+    "description": "Onafhankelijk advies en begeleiding bij schoonmaak- en facilitaire aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen.",
     "url": "https://www.secbv.nl/",
     "email": "info@secbv.nl",
     "telephone": ["+31650748992", "+31638323667"],
+    "logo": "https://www.secbv.nl/assets/logo-sec.png",
+    "image": "https://www.secbv.nl/assets/logo-sec.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "De Tuinderij 19",
@@ -54,14 +57,94 @@
       "addressLocality": "Leusden",
       "addressCountry": "NL"
     },
-    "areaServed": "NL",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Nederland"
+    },
     "knowsAbout": [
+      "Schoonmaak aanbestedingen",
       "Facilitaire aanbestedingen",
+      "Aanbestedingsbegeleiding schoonmaak",
       "Schoonmaakonderhoud van gebouwen",
-      "Contractbeheer",
-      "Kwaliteitsmetingen",
-      "Leveranciersselectie"
-    ]
+      "Contractbeheer schoonmaak",
+      "Kwaliteitsbeheer schoonmaak",
+      "Leveranciersselectie schoonmaak"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Diensten van S.E.C. B.V.",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Schoonmaak aanbestedingen",
+            "url": "https://www.secbv.nl/schoonmaak-aanbestedingen/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Aanbestedingsbegeleiding schoonmaak",
+            "url": "https://www.secbv.nl/aanbestedingsbegeleiding-schoonmaak/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Facilitaire aanbestedingen",
+            "url": "https://www.secbv.nl/facilitaire-aanbestedingen/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Schoonmaakadvies",
+            "url": "https://www.secbv.nl/schoonmaakadvies/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Leveranciersselectie schoonmaak",
+            "url": "https://www.secbv.nl/leveranciersselectie-schoonmaak/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Contractbeheer schoonmaak",
+            "url": "https://www.secbv.nl/contractbeheer-schoonmaak/"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Kwaliteitsbeheer schoonmaak",
+            "url": "https://www.secbv.nl/kwaliteitsbeheer-schoonmaak/"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.secbv.nl/#website",
+    "url": "https://www.secbv.nl/",
+    "name": "S.E.C. B.V. — Schoonmaak Expertise Centrum",
+    "inLanguage": "nl-NL",
+    "publisher": { "@id": "https://www.secbv.nl/#organisatie" }
   }
   </script>
 
@@ -92,7 +175,7 @@
         "name": "Zijn jullie echt onafhankelijk?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ja. Wij hebben geen enkele binding met schoonmaak- of onderhoudsbedrijven en ontvangen geen vergoedingen van leveranciers. Ons enige belang is het resultaat voor uw organisatie."
+          "text": "Ja. Wij hebben geen enkele binding met schoonmaakbedrijven of facilitair dienstverleners en ontvangen geen vergoedingen van leveranciers. Ons enige belang is het resultaat voor uw organisatie."
         }
       },
       {
@@ -128,11 +211,11 @@
 
       <nav class="nav" id="primary-nav" aria-label="Hoofdnavigatie">
         <ul class="nav-list">
-          <li><a href="#over">Over ons</a></li>
-          <li><a href="#diensten">Diensten</a></li>
-          <li><a href="#aanbesteding">Aanbesteding</a></li>
-          <li><a href="#werkwijze">Werkwijze</a></li>
-          <li><a href="#sectoren">Sectoren</a></li>
+          <li><a href="/schoonmaak-aanbestedingen/">Aanbestedingen</a></li>
+          <li><a href="/aanbestedingsbegeleiding-schoonmaak/">Begeleiding</a></li>
+          <li><a href="/schoonmaakadvies/">Schoonmaakadvies</a></li>
+          <li><a href="/contractbeheer-schoonmaak/">Contract &amp; kwaliteit</a></li>
+          <li><a href="/kennisbank/">Kennisbank</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#contact" class="btn btn-primary nav-cta-mobile">Neem contact op</a>
@@ -153,12 +236,13 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Onafhankelijk advies · Facilitaire aanbestedingen</p>
-            <h1 id="hero-title">Grip op uw facilitaire aanbestedingen</h1>
+            <p class="eyebrow">Onafhankelijk advies · Schoonmaak- en facilitaire aanbestedingen</p>
+            <h1 id="hero-title">Grip op uw schoonmaak&shy;aanbesteding</h1>
             <p class="hero-lead">
               S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij
-              facilitaire aanbestedingen, met een sterke focus op schoonmaakonderhoud
-              van gebouwen — van de eerste analyse tot ondertekend contract.
+              schoonmaak- en facilitaire aanbestedingen, met een sterke focus op
+              schoonmaakonderhoud van gebouwen — van de eerste analyse tot
+              ondertekend contract en geborgde kwaliteit.
             </p>
             <div class="hero-actions">
               <a href="#contact" class="btn btn-primary">Plan een kennismaking</a>
@@ -277,10 +361,21 @@
             <span class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
             </span>
-            <h3>Aanbestedingsbegeleiding</h3>
+            <h3><a href="/schoonmaak-aanbestedingen/">Schoonmaak aanbestedingen</a></h3>
+            <p>
+              Europees, openbaar of onderhands: welke procedure past bij uw organisatie,
+              en wat komt er bij zo'n traject kijken?
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+            </span>
+            <h3><a href="/aanbestedingsbegeleiding-schoonmaak/">Aanbestedingsbegeleiding</a></h3>
             <p>
               Volledige begeleiding van uw aanbesteding: van programma van eisen en
-              gunningscriteria tot beoordeling en gunning. Transparant en juridisch zorgvuldig.
+              gunningscriteria tot beoordeling en gunning. Transparant en zorgvuldig.
             </p>
           </article>
 
@@ -288,21 +383,21 @@
             <span class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
             </span>
-            <h3>Schoonmaakonderhoud</h3>
+            <h3><a href="/facilitaire-aanbestedingen/">Facilitaire aanbestedingen</a></h3>
             <p>
-              Advies over schoonmaakonderhoud van gebouwen: programma's van eisen,
-              resultaatgericht schoonmaken en objectieve kwaliteitsmetingen.
+              Breder dan schoonmaak alleen: advies bij het aanbesteden van facilitaire
+              diensten, met schoonmaakonderhoud als vertrekpunt.
             </p>
           </article>
 
           <article class="card">
             <span class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-4 12.7V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.3A7 7 0 0 0 12 2z"/><path d="M9 22h6"/></svg>
             </span>
-            <h3>Contract- &amp; kwaliteitsbeheer</h3>
+            <h3><a href="/schoonmaakadvies/">Schoonmaakadvies</a></h3>
             <p>
-              Doorlopende bewaking van afspraken, prestaties en kwaliteit — zodat het
-              contract ook ná gunning waarmaakt wat er is beloofd.
+              Onafhankelijk advies over schoonmaakonderhoud van gebouwen: programma's
+              van eisen, resultaatgericht schoonmaken en werkbare afspraken.
             </p>
           </article>
 
@@ -310,7 +405,7 @@
             <span class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </span>
-            <h3>Leveranciersselectie</h3>
+            <h3><a href="/leveranciersselectie-schoonmaak/">Leveranciersselectie</a></h3>
             <p>
               Objectieve selectie en beoordeling van dienstverleners, zodat u kiest op
               basis van kwaliteit en geschiktheid in plaats van alleen prijs.
@@ -319,9 +414,20 @@
 
           <article class="card">
             <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+            </span>
+            <h3><a href="/contractbeheer-schoonmaak/">Contractbeheer</a></h3>
+            <p>
+              Doorlopende bewaking van afspraken en prestaties — zodat het contract ook
+              ná gunning waarmaakt wat er is beloofd.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
             </span>
-            <h3>Kwaliteitsmetingen</h3>
+            <h3><a href="/kwaliteitsbeheer-schoonmaak/">Kwaliteitsbeheer</a></h3>
             <p>
               Meetbaar inzicht in geleverde kwaliteit via objectieve metingen, zodat
               sturing op prestaties gebaseerd is op feiten, niet op aannames.
@@ -347,7 +453,13 @@
             proces en zorgen dat inschrijvers op gelijke voet worden beoordeeld. Zo neemt u
             een besluit dat inhoudelijk onderbouwd én juridisch houdbaar is.
           </p>
-          <a href="#werkwijze" class="btn btn-outline">Bekijk onze werkwijze</a>
+          <p>
+            Meer weten over de procedurevormen en het traject?
+            Lees over <a href="/schoonmaak-aanbestedingen/">schoonmaak aanbestedingen</a>,
+            <a href="/aanbestedingsbegeleiding-schoonmaak/">aanbestedingsbegeleiding</a> of
+            <a href="/facilitaire-aanbestedingen/">facilitaire aanbestedingen</a>.
+          </p>
+          <a href="/schoonmaak-aanbestedingen/" class="btn btn-outline">Naar schoonmaak aanbestedingen</a>
         </div>
 
         <div class="benefit-grid" role="list">
@@ -387,7 +499,7 @@
           <div class="reason">
             <span class="reason-num">01</span>
             <h3>Volledig onafhankelijk</h3>
-            <p>Wij hebben geen enkele binding met schoonmaak- of onderhoudsbedrijven. Ons enige belang is dat van uw organisatie.</p>
+            <p>Wij hebben geen enkele binding met schoonmaakbedrijven of facilitair dienstverleners. Ons enige belang is dat van uw organisatie.</p>
           </div>
           <div class="reason">
             <span class="reason-num">02</span>
@@ -461,7 +573,7 @@
           <li>Onderwijs</li>
           <li>Vastgoed &amp; facility management</li>
           <li>Zakelijke dienstverlening</li>
-          <li>Industrie &amp; techniek</li>
+          <li>Bedrijfsleven &amp; industrie</li>
         </ul>
       </div>
     </section>
@@ -504,8 +616,8 @@
             <summary>Zijn jullie echt onafhankelijk?</summary>
             <div class="faq-body">
               <p>
-                Ja. Wij hebben geen enkele binding met schoonmaak- of onderhoudsbedrijven en ontvangen
-                geen vergoedingen van leveranciers. Ons enige belang is het resultaat voor uw organisatie.
+                Ja. Wij hebben geen enkele binding met schoonmaakbedrijven of facilitair dienstverleners en
+                ontvangen geen vergoedingen van leveranciers. Ons enige belang is het resultaat voor uw organisatie.
               </p>
             </div>
           </details>
@@ -530,6 +642,28 @@
             </div>
           </details>
         </div>
+
+        <h3 class="related-heading">Verder lezen</h3>
+        <ul class="related">
+          <li>
+            <a href="/kennisbank/">
+              <span class="related-title">Kennisbank</span>
+              <span class="related-desc">Achtergrond bij Europese, openbare en onderhandse aanbestedingen, VSR en de Code Verantwoordelijk Marktgedrag.</span>
+            </a>
+          </li>
+          <li>
+            <a href="/vergelijk-schoonmaakadviesbureaus/">
+              <span class="related-title">Adviesbureaus vergelijken</span>
+              <span class="related-desc">Welke advies-, inkoop- en kwaliteitsorganisaties zijn actief in deze markt, en waarop kunt u ze vergelijken?</span>
+            </a>
+          </li>
+          <li>
+            <a href="/schoonmaakadvies/">
+              <span class="related-title">Schoonmaakadvies</span>
+              <span class="related-desc">Onafhankelijk advies over schoonmaakonderhoud van gebouwen — van analyse tot borging.</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -642,15 +776,29 @@
         <p>Onafhankelijk advies bij facilitaire aanbestedingen, met een sterke focus op schoonmaakonderhoud van gebouwen.</p>
       </div>
 
+      <nav class="footer-nav" aria-label="Diensten">
+        <h3>Diensten</h3>
+        <ul>
+          <li><a href="/schoonmaak-aanbestedingen/">Schoonmaak aanbestedingen</a></li>
+          <li><a href="/aanbestedingsbegeleiding-schoonmaak/">Aanbestedingsbegeleiding</a></li>
+          <li><a href="/facilitaire-aanbestedingen/">Facilitaire aanbestedingen</a></li>
+          <li><a href="/schoonmaakadvies/">Schoonmaakadvies</a></li>
+          <li><a href="/leveranciersselectie-schoonmaak/">Leveranciersselectie</a></li>
+          <li><a href="/contractbeheer-schoonmaak/">Contractbeheer</a></li>
+          <li><a href="/kwaliteitsbeheer-schoonmaak/">Kwaliteitsbeheer</a></li>
+        </ul>
+      </nav>
+
       <nav class="footer-nav" aria-label="Footernavigatie">
         <h3>Navigatie</h3>
         <ul>
-          <li><a href="#over">Over ons</a></li>
-          <li><a href="#diensten">Diensten</a></li>
-          <li><a href="#aanbesteding">Aanbesteding</a></li>
-          <li><a href="#werkwijze">Werkwijze</a></li>
-          <li><a href="#faq">Veelgestelde vragen</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#over">Over ons</a></li>
+          <li><a href="/#werkwijze">Werkwijze</a></li>
+          <li><a href="/kennisbank/">Kennisbank</a></li>
+          <li><a href="/vergelijk-schoonmaakadviesbureaus/">Adviesbureaus vergelijken</a></li>
+          <li><a href="/#faq">Veelgestelde vragen</a></li>
+          <li><a href="/#contact">Contact</a></li>
         </ul>
       </nav>
 

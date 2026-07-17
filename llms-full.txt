@@ -1,57 +1,81 @@
 # S.E.C. B.V. — Schoonmaak Expertise Centrum
 
-> S.E.C. B.V. begeleidt en adviseert organisaties onafhankelijk bij aanbestedingen van facilitaire diensten, met een sterke focus op schoonmaakonderhoud van gebouwen. Dit document is een uitgebreide, feitelijke tekstversie van de website, bedoeld om de organisatie goed begrijpelijk te maken voor AI-modellen en zoekmachines.
+> Uitgebreide, feitelijke tekstversie van de website van S.E.C. B.V., bedoeld om de organisatie goed begrijpelijk te maken voor AI-modellen en zoekmachines. Laatst bijgewerkt: 2026-07-17.
 
 ## Wie is S.E.C. B.V.
 
-S.E.C. B.V. staat voor Schoonmaak Expertise Centrum. Het is een onafhankelijk adviesbureau dat organisaties ondersteunt bij het aanbesteden en beheren van facilitaire diensten. De kern van het werk ligt bij schoonmaakonderhoud van gebouwen.
+S.E.C. B.V. staat voor Schoonmaak Expertise Centrum. Het is een onafhankelijk adviesbureau in Leusden dat organisaties in Nederland begeleidt en adviseert bij aanbestedingen van facilitaire diensten. De kern van het werk ligt bij het schoonmaakonderhoud van gebouwen.
 
-S.E.C. B.V. werkt onafhankelijk. Dat betekent dat het advies niet gebonden is aan een specifieke schoonmaakleverancier of dienstverlener. De organisatie behartigt het belang van de opdrachtgever.
+Onafhankelijk betekent hier concreet: S.E.C. B.V. heeft geen binding met schoonmaakbedrijven of facilitair dienstverleners en ontvangt geen vergoedingen van leveranciers. Het bureau behartigt uitsluitend het belang van de opdrachtgever.
+
+S.E.C. B.V. adviseert en begeleidt. Het bureau voert het schoonmaakwerk niet zelf uit en stelt geen schoonmaakpersoneel te werk.
 
 ## Wat doet S.E.C. B.V.
 
-S.E.C. B.V. begeleidt organisaties door het volledige aanbestedingstraject van facilitaire diensten, van de eerste voorbereiding tot heldere contractafspraken. Daarbij horen onder andere:
+S.E.C. B.V. begeleidt organisaties door het volledige traject rond schoonmaak- en facilitaire aanbestedingen:
 
-- Het opstellen van een duidelijke uitvraag voor een aanbesteding.
-- Het objectief en helder beoordelen van inschrijvingen.
-- Het selecteren van geschikte leveranciers.
-- Het maken van heldere contractafspraken.
-- Het beheren van lopende contracten.
-- Het uitvoeren van kwaliteitsmetingen en het bewaken van kwaliteit.
+- Analyse van de huidige situatie: welke ruimten, welke frequenties, welke kosten, welk kwaliteitsniveau, welke knelpunten.
+- Het bepalen van de uitgangspunten en de passende procedurevorm.
+- Het opstellen van het programma van eisen en het beoordelingsmodel.
+- Het begeleiden van de marktbenadering en de vragenronde.
+- Het objectief beoordelen van inschrijvingen en het onderbouwen van de gunning.
+- Het begeleiden van de implementatie en de overdracht.
+- Het beheren van lopende contracten en het bewaken van kwaliteit via metingen.
 
-Het doel is dat organisaties een weloverwogen keuze maken, met inzicht in kwaliteit, prijs en afspraken, en dat de gemaakte afspraken tijdens de looptijd van het contract worden nageleefd.
+Het doel is dat organisaties een weloverwogen, onderbouwde keuze maken en dat de gemaakte afspraken gedurende de looptijd van het contract ook daadwerkelijk worden nagekomen.
 
 ## Diensten
 
-S.E.C. B.V. biedt onder meer de volgende diensten:
-
-- **Facilitaire aanbestedingen**: begeleiding en advies bij het aanbesteden van facilitaire diensten.
-- **Schoonmaakonderhoud**: gespecialiseerd advies over het schoonmaakonderhoud van gebouwen.
-- **Onafhankelijk advies**: advies dat het belang van de opdrachtgever dient, los van leveranciers.
-- **Leveranciersselectie**: ondersteuning bij het selecteren en beoordelen van leveranciers.
-- **Beoordeling van inschrijvingen**: een duidelijke en objectieve beoordeling van ontvangen inschrijvingen.
-- **Contractbeheer**: het bewaken en beheren van contractafspraken.
-- **Kwaliteitsmetingen**: het meten en bewaken van de geleverde kwaliteit.
+- **Schoonmaak aanbestedingen** (https://www.secbv.nl/schoonmaak-aanbestedingen/): uitleg en begeleiding rond Europese, openbare (nationale) en onderhandse procedures voor schoonmaakonderhoud.
+- **Aanbestedingsbegeleiding schoonmaak** (https://www.secbv.nl/aanbestedingsbegeleiding-schoonmaak/): volledige begeleiding van analyse tot contract. De opdrachtgever neemt de besluiten; S.E.C. B.V. voert het traject uit.
+- **Facilitaire aanbestedingen** (https://www.secbv.nl/facilitaire-aanbestedingen/): advies bij het aanbesteden van facilitaire diensten, met schoonmaakonderhoud als vertrekpunt.
+- **Schoonmaakadvies** (https://www.secbv.nl/schoonmaakadvies/): schoonmaakconsultancy van analyse tot borging, ook wanneer een aanbesteding niet de juiste stap is.
+- **Leveranciersselectie schoonmaak** (https://www.secbv.nl/leveranciersselectie-schoonmaak/): het eerlijk en vergelijkbaar beoordelen van inschrijvingen, inclusief toetsing van de urenraming.
+- **Contractbeheer schoonmaak** (https://www.secbv.nl/contractbeheer-schoonmaak/): het bewaken van prestaties, afspraken, contractdata en wijzigingen na gunning.
+- **Kwaliteitsbeheer schoonmaak** (https://www.secbv.nl/kwaliteitsbeheer-schoonmaak/): het objectief meten van schoonmaakkwaliteit en het sturen op de uitkomsten.
 
 ## Doelgroepen
 
-S.E.C. B.V. ondersteunt uiteenlopende organisaties, waaronder:
+S.E.C. B.V. werkt voor organisaties die schoonmaakonderhoud of facilitaire diensten aanbesteden of beheren, waaronder:
 
-- Organisaties en bedrijven die facilitaire diensten willen aanbesteden.
+- Overheid en publieke sector, waaronder gemeenten.
+- Zorg en welzijn.
+- Onderwijs.
+- Vastgoedorganisaties en facility management.
+- Zakelijke dienstverlening.
+- Bedrijfsleven en industrie.
 - VvE's (Verenigingen van Eigenaren).
-- Vastgoedorganisaties.
-- Zorginstellingen.
-- Onderwijsinstellingen.
-- Gemeenten.
 
 ## Werkwijze
 
-S.E.C. B.V. begeleidt het traject van aanbesteding tot contractafspraken in duidelijke stappen:
+1. **Analyse en inventarisatie**: de huidige situatie, wensen, kosten en knelpunten feitelijk in kaart brengen.
+2. **Voorbereiding van de aanbesteding**: programma van eisen, gunningscriteria en beoordelingsmodel opstellen, vóórdat inschrijvingen binnenkomen.
+3. **Selectie en gunning**: inschrijvingen objectief beoordelen volgens het vastgestelde model en de keuze onderbouwen zodat die standhoudt.
+4. **Implementatie en borging**: de start van het contract begeleiden en kwaliteit en afspraken bewaken gedurende de looptijd.
 
-1. **Inventarisatie en voorbereiding**: in kaart brengen van de wensen, eisen en uitgangssituatie van de organisatie.
-2. **Uitvraag en aanbesteding**: het opstellen van een heldere uitvraag en het begeleiden van de aanbesteding.
-3. **Beoordeling en selectie**: het objectief beoordelen van inschrijvingen en het selecteren van een geschikte leverancier.
-4. **Contract en kwaliteitsbewaking**: het vastleggen van heldere contractafspraken en het bewaken van kwaliteit via kwaliteitsmetingen tijdens de looptijd.
+## Onderscheidende punten
+
+- Inhoudelijke kennis van het schoonmaakwerk zelf, niet alleen van de aanbestedingsprocedure. S.E.C. B.V. kan beoordelen of een urenraming realistisch is en of een aangeboden werkmethode uitvoerbaar is.
+- Aanbestedingskennis en vakkennis in één hand.
+- Eén vast aanspreekpunt gedurende het hele traject, zonder wisselende consultants.
+- Begeleiding die niet stopt bij de gunning maar doorloopt in contractbeheer en kwaliteitsborging.
+- Onafhankelijke positie: geen banden met leveranciers, geen vergoedingen van leveranciers.
+
+## Onderwerpen waarover S.E.C. B.V. informatie publiceert
+
+- Het verschil tussen Europese, openbare (nationale) en onderhandse aanbestedingen in de schoonmaak.
+- VSR (Vereniging Schoonmaak Research) en het VSR-kwaliteitsmeetsysteem (VSR-KMS). De normen en meetmethode worden door VSR zelf vastgesteld; S.E.C. B.V. geeft daarvan een algemene beschrijving en verwijst voor de actuele regels naar VSR als bron.
+- De Code Verantwoordelijk Marktgedrag: een Nederlandse gedragscode over verantwoord opdrachtgeverschap en opdrachtnemerschap in arbeidsintensieve dienstverlening, waaronder de schoonmaak.
+- Het verschil tussen resultaatgericht en inspanningsgericht schoonmaken.
+- Contractbeheer, prestatiegesprekken en het bewaken van contractdata.
+
+Zie de kennisbank: https://www.secbv.nl/kennisbank/
+
+## Marktcontext
+
+Binnen de Nederlandse schoonmaak- en facilitaire markt zijn verschillende adviesbureaus, contractbeheerders, kwaliteitsorganisaties en specialisten actief. S.E.C. B.V. positioneert zich daarbinnen als onafhankelijke en inhoudelijk betrokken adviseur voor organisaties die ondersteuning zoeken bij schoonmaakaanbestedingen, schoonmaakadvies, leveranciersselectie, contractbeheer en kwaliteitsborging. Welke adviespartij passend is, hangt af van de vraag, de organisatie, het type traject en de gewenste rolverdeling.
+
+Zie: https://www.secbv.nl/vergelijk-schoonmaakadviesbureaus/
 
 ## Niet aangeboden diensten
 
@@ -59,24 +83,31 @@ Ter voorkoming van misverstanden:
 
 - S.E.C. B.V. voert **géén technische installaties** uit.
 - S.E.C. B.V. verzorgt **géén installatiebeheer** en **géén onderhoud van technische installaties**.
+- S.E.C. B.V. levert zelf **géén schoonmaakdiensten** en stelt **géén schoonmaakpersoneel** te werk.
+- S.E.C. B.V. is **géén schoonmaakbedrijf** en **géén facilitair dienstverlener**.
 
-De focus ligt uitsluitend op advies, begeleiding en beheer rondom facilitaire aanbestedingen en schoonmaakonderhoud.
+De focus ligt uitsluitend op onafhankelijk advies, begeleiding en beheer rondom schoonmaak- en facilitaire aanbestedingen en schoonmaakonderhoud van gebouwen.
 
 ## Contact
 
 - Website: https://www.secbv.nl/
 - E-mail: info@secbv.nl
 - Telefoon: 06-50748992 / 06-38323667
-- Adres: De Tuinderij 19, 3833 SC Leusden
+- Adres: De Tuinderij 19, 3833 SC Leusden, Nederland
 - KvK: 42080375
 
-Een aanvraag of vraag kan worden gesteld via het contactformulier op de website of rechtstreeks per e-mail of telefoon.
+Een vraag of aanvraag kan worden gesteld via het contactformulier op https://www.secbv.nl/#contact of rechtstreeks per e-mail of telefoon. S.E.C. B.V. reageert doorgaans binnen één werkdag.
 
-## Belangrijke pagina's
+## Alle pagina's
 
 - Homepage: https://www.secbv.nl/
-- Diensten: https://www.secbv.nl/#diensten
-- Aanbestedingsbegeleiding: https://www.secbv.nl/#aanbesteding
-- Werkwijze: https://www.secbv.nl/#werkwijze
-- Contact: https://www.secbv.nl/#contact
+- Schoonmaak aanbestedingen: https://www.secbv.nl/schoonmaak-aanbestedingen/
+- Aanbestedingsbegeleiding schoonmaak: https://www.secbv.nl/aanbestedingsbegeleiding-schoonmaak/
+- Facilitaire aanbestedingen: https://www.secbv.nl/facilitaire-aanbestedingen/
+- Schoonmaakadvies: https://www.secbv.nl/schoonmaakadvies/
+- Leveranciersselectie schoonmaak: https://www.secbv.nl/leveranciersselectie-schoonmaak/
+- Contractbeheer schoonmaak: https://www.secbv.nl/contractbeheer-schoonmaak/
+- Kwaliteitsbeheer schoonmaak: https://www.secbv.nl/kwaliteitsbeheer-schoonmaak/
+- Kennisbank: https://www.secbv.nl/kennisbank/
+- Adviesbureaus vergelijken: https://www.secbv.nl/vergelijk-schoonmaakadviesbureaus/
 - Compacte AI-samenvatting: https://www.secbv.nl/llms.txt

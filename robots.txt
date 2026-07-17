@@ -1,11 +1,13 @@
 # robots.txt — S.E.C. B.V. (Schoonmaak Expertise Centrum)
-# Normale crawling is toegestaan voor alle bots.
+# Normale crawling is toegestaan voor alle bots, inclusief AI-crawlers.
 
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /private/
 
 # AI-vriendelijke samenvattingen voor modellen en zoekmachines:
-#   https://www.secbv.nl/llms.txt
-#   https://www.secbv.nl/llms-full.txt
+#   https://www.secbv.nl/llms.txt        (compact)
+#   https://www.secbv.nl/llms-full.txt   (uitgebreid en feitelijk)
 
 Sitemap: https://www.secbv.nl/sitemap.xml
