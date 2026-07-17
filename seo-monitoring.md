@@ -183,14 +183,21 @@ Afvinken; kost ongeveer een kwartier.
 [ ] https://www.secbv.nl/llms-full.txt laadt
 [ ] Geen verwijzingen naar technische installaties op de site (zie controle hieronder)
 [ ] "Materkey" komt nergens voor (zie controle hieronder)
-[ ] Contactformulier op /contact/: testbericht verstuurd en aangekomen op info@secbv.nl
-[ ] Bedanktpagina verschijnt na verzending
+[ ] Contactformulier op /contact/ (SMTP via /api/contact.php): testbericht verstuurd en aangekomen op info@secbv.nl
+[ ] Bedanktpagina (/bedankt.html) verschijnt na verzending
 [ ] Hoofd-CTA's werken: "Neem contact op", "Plan een kennismaking", dienstenkaarten
 [ ] Mobiel menu opent en sluit op een subpagina (niet alleen op de homepage)
 [ ] Kruimelpad toont chevrons, geen genummerde lijst (zie cache-waarschuwing hieronder)
 [ ] Pagina's laden snel (PageSpeed Insights, mobiel, minimaal 90)
 [ ] Contentkansen genoteerd voor de volgende ronde
 ```
+
+> **Hoe werkt het contactformulier?** Het formulier op `/contact/` verstuurt via een
+> eigen **SMTP-endpoint** (`/api/contact.php`, verzending met **PHPMailer**) — geen
+> externe dienst zoals Web3Forms. Na verzending verschijnt `/bedankt.html`. De
+> SMTP-inloggegevens staan in `private/contact-config.php`, **buiten de webroot en
+> buiten git** (`.gitignore`); alleen `private/contact-config.example.php` (met
+> placeholder-wachtwoord) staat in de repo. Zie README.md voor de volledige uitleg.
 
 > **Ziet de site er kapot uit na een upload?** Kijk eerst naar de cache, niet naar de CSS.
 > `.htaccess` cachet CSS en JS een jaar; HTML niet. Een terugkerende bezoeker krijgt dan
